@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import useWebSocket from 'react-use-websocket';
-
+import classes from '../styles/Home.module.css';
+import e from 'cors';
 // const renderUsersList = users => {
 //     return (
 //         <ul>
@@ -22,6 +23,7 @@ export default function Home({ username }) {
     })
 
     const sendMessage = () => {
+        // .preventDefault();
 
         sendJsonMessage({
             type: "text",
@@ -49,22 +51,36 @@ export default function Home({ username }) {
     return (
         <>
             {/* {lastJsonMessage && <p>user: {renderUsersList(lastJsonMessage)}</p>} */}
-            <div>
-                <div>
+            <div className={classes.chatArea}>
+                <div className={classes.messageContainer}>
                     {/* Render messages */}
                     {messages.map((msg, index) => (
-                        <p key={index}>
+                        <ul key={index} className={classes.message}>
+                            {console.log("sender: " + msg.sender, "content: " + msg.content)}
                             <strong>{msg.sender}:</strong> {msg.content}
-                        </p>
+                            {/* <li className={classes.msgsender}>{msg.sender}</li>
+                            <li className={classes.msgcontent}>{msg.content}</li> */}
+                        </ul>
                     ))}
                 </div>
+                <div className={classes.chatInput}>
+                    <input
+                        type='text'
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                    />
+                    <button className={classes.btn} onClick={sendMessage}>send</button>
+                    {/* <form onSubmit={sendMessage}>
+                        <input
+                            type='text'
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                        />
+                        <button className={classes.btn} type='submit'>send</button>
+                    </form> */}
+
+                </div>
             </div>
-            <input
-                type='text'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-            />
-            <button onClick={sendMessage}>send</button>
         </>
     )
 }

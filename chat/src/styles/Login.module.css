@@ -1,0 +1,58 @@
+
+
+.fullscreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: rgb(166, 255, 22);
+  background: linear-gradient(
+    221deg,
+    rgba(166, 255, 22, 1) 0%,
+    rgba(255, 80, 80, 1) 44%,
+    rgba(153, 56, 254, 1) 100%
+  );
+}
+.fullscreen > h1,
+p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.form > input[type="text"] {
+  width: 24rem;
+  /* padding: 12px 20px; */
+  padding: 1rem 0.5rem;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+}
+.form > input[type="text"]:focus {
+  border: none;
+  background-color: rgb(255, 212, 212);
+  font-size: medium;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  background: #0f0f0f;
+  color: white;
+}
+.btn:hover {
+  background: #000000;
+  color: white;
+}
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=f7522f&c2=e2fe01&gt=l&gd=dtr
+*/
+/* background: #F7522F;
+background: linear-gradient(225deg, #F7522F, #E2FE01); */

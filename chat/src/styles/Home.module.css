@@ -1,0 +1,70 @@
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  margin: 0 8rem;
+  width: 75%;
+  margin-top: 1rem;
+  border: 1px solid rgb(24, 24, 24);
+  border-radius: 4px;
+  /* height: 74vh; */
+}
+.messageContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  /* border: 1px solid #1f1f1f; */
+}
+
+/* .message {
+  display: flex;
+  max-width: 24rem;
+  padding: .6rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  color: black;
+  gap: 0.2rem;
+  background-color: rgb(26, 121, 245);
+} */
+
+
+.msgcontent {
+  list-style: none;
+  background-color: cadetblue;
+  font-size: x-large;
+  margin-top: 1rem;
+  width: 24rem;
+  border-radius: 20px;
+  padding: 1.2rem 2rem;
+}
+.msgsender {
+  /* background-color: yellow; */
+  list-style: none;
+  position: absolute;
+  left: 25px;
+  top: 35px;
+  font-size: small;
+  color: antiquewhite;
+}
+
+
+.chatInput {
+  margin-top: 70vh;
+  display: flex;
+  background-color: cadetblue;
+}
+.chatInput > input[type="text"] {
+  width: 24rem;
+  padding: 1rem;
+  flex-grow: 2;
+  border-radius: 4px;
+  border: 0.5px solid black;
+}
+.btn {
+  all: unset;
+  flex-grow: 1;
+  background-color: limegreen;
+  text-align: center;
+  border: 1px solid green;
+}
